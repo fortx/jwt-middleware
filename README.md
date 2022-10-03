@@ -9,7 +9,7 @@ Programming Language applications. JWTs are typically used to protect API
 endpoints, and are often issued using OpenID Connect.
 
 [![Build Status](https://travis-ci.org/jgillich/jwt-middleware.svg?branch=master)](https://travis-ci.org/jgillich/jwt-middleware)
-[![GoDoc](https://godoc.org/github.com/jgillich/jwt-middleware?status.svg)](https://godoc.org/github.com/jgillich/jwt-middleware)
+[![GoDoc](https://godoc.org/github.com/fortx/jwt-middleware?status.svg)](https://godoc.org/github.com/fortx/jwt-middleware)
 
 ## Key Features
 
@@ -19,7 +19,7 @@ endpoints, and are often issued using OpenID Connect.
 ## Installing
 
 ````bash
-go get github.com/jgillich/jwt-middleware
+go get github.com/fortx/jwt-middleware
 ````
 
 ## Using it
@@ -34,8 +34,8 @@ import (
   "fmt"
   "net/http"
 
-  "github.com/jgillich/jwt-middleware"
-  "github.com/dgrijalva/jwt-go"
+  "github.com/fortx/jwt-middleware"
+  "github.com/golang-jwt/jwt"
 )
 
 var myHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -77,9 +77,9 @@ import (
   "fmt"
   "net/http"
 
-  "github.com/jgillich/jwt-middleware"
+  "github.com/fortx/jwt-middleware"
   "github.com/urfave/negroni"
-  "github.com/dgrijalva/jwt-go"
+  "github.com/golang-jwt/jwt"
   "github.com/gorilla/mux"
 )
 
@@ -127,7 +127,7 @@ type Options struct {
   // Default value: nil
   ValidationKeyGetter jwt.Keyfunc
   // The function that will be called when there's an error validating the token
-  // Default value: https://github.com/jgillich/jwt-middleware/blob/master/jwtmiddleware.go#L35
+  // Default value: https://github.com/fortx/jwt-middleware/blob/master/jwtmiddleware.go#L35
   ErrorHandler errorHandler
   // A boolean indicating if the credentials are required or not
   // Default value: false
@@ -184,7 +184,7 @@ jwtmiddleware.New(jwtmiddleware.Options{
 
 ## Examples
 
-You can check out working examples in the [examples folder](https://github.com/jgillich/jwt-middleware/tree/master/examples)
+You can check out working examples in the [examples folder](https://github.com/fortx/jwt-middleware/tree/master/examples)
 
 ## License
 

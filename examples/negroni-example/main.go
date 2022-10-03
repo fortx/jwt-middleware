@@ -2,11 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/jgillich/jwt-middleware"
-	"github.com/urfave/negroni"
-	"github.com/dgrijalva/jwt-go"
-	"github.com/gorilla/mux"
 	"net/http"
+
+	jwtmiddleware "github.com/fortx/jwt-middleware"
+	"github.com/golang-jwt/jwt"
+	"github.com/gorilla/mux"
+	"github.com/urfave/negroni"
 )
 
 func main() {

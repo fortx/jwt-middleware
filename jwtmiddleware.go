@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/dgrijalva/jwt-go"
+	"github.com/golang-jwt/jwt"
 )
 
 // TokenContextKey is used as context key for the token on http requests
